@@ -27,7 +27,7 @@ make_alg_log <- function(base_symbol,    # base symbol (eg. T for tau vector)
   # matrix expression from string elements
   expr <- paste0("mat", base_symbol, "0", "*exp(")
   for (i in 1:(k - 1)) {
-    expr[i + 1] <- paste0("mat", matrix_letter, i, "*", dummy_names[i]) }
+    expr[i + 1] <- paste0("mat", matrix_letter, i, "*", dummies[i]) }
   mat_expr <- paste(expr[1], paste(expr[2:length(expr)], collapse = " + "), ")")
   # store as mx object with name from matrix_name arg
   mat <- mxAlgebraFromString( name = matrix_name, mat_expr )
@@ -43,7 +43,7 @@ make_alg_z <- function(base_symbol,    # base symbol (eg. T for tau vector)
   # matrix expression from string elements
   expr <- paste0("(exp( 2 * (matP0 +")
   for (i in 1:(k - 1)) {
-    expr[i + 1] <- paste0("mat", matrix_letter, i, "*", dummy_names[i]) }
+    expr[i + 1] <- paste0("mat", matrix_letter, i, "*", dummies[i]) }
   mat_expr <- paste(
     expr[1],
     paste(expr[2:length(expr)], collapse = " + "),
