@@ -8,7 +8,7 @@
 # Returns:
 #   logical matrix n_indicators x n_factors (TRUE = freely estimated)
 
-factor_mask_matrix <- function(n_indicators, n_factors, assign = "balanced"){
+factor_mask <- function(n_indicators, n_factors, assign = "balanced"){
   if(!is.numeric(n_indicators) || n_indicators <= 0) stop("n_indicators must be positive integer")
   if(!is.numeric(n_factors) || n_factors <= 0) stop("n_factors must be positive integer")
   n_indicators <- as.integer(n_indicators); n_factors <- as.integer(n_factors)
@@ -38,14 +38,14 @@ factor_mask_matrix <- function(n_indicators, n_factors, assign = "balanced"){
 }
 
 # # examples:
-# factor_mask_matrix(4, 1) creates 
+# factor_mask(4, 1) creates 
 #     F1
 # y1 TRUE
 # y2 TRUE
 # y3 TRUE
 # y4 TRUE
 
-# factor_mask_matrix(6, 2)
+# factor_mask(6, 2)
 #       F1    F2
 # y1  TRUE FALSE
 # y2  TRUE FALSE
@@ -54,7 +54,7 @@ factor_mask_matrix <- function(n_indicators, n_factors, assign = "balanced"){
 # y5 FALSE  TRUE
 # y6 FALSE  TRUE
 
-#factor_mask_matrix(10, 3, assign = c(rep(1,3), rep(2,5), rep(3,2)))
+#factor_mask(10, 3, assign = c(rep(1,3), rep(2,5), rep(3,2)))
 #        F1    F2    F3
 # y1   TRUE FALSE FALSE
 # y2   TRUE FALSE FALSE
