@@ -55,3 +55,19 @@ make_alg_z <- function(base_symbol,    # base symbol (eg. T for tau vector)
   mat <- mxAlgebraFromString( name = matrix_name, mat_expr )
   return(mat) 
   }
+
+
+# # For example, the following syntax uses mxAlgebraFromString in the background 
+# matR <- make_alg_z("P", "dP", matrix_name = "matR", k = 7)
+
+# # which gives the same output as the following manual specification of an mxAlgebra object
+# matR <- mxAlgebra(expression =
+#                     (exp( 2 * (
+#                         matP0 +
+#                           matdP1*d1 + matdP2*d2 + matdP3*d3 +
+#                           matdP4*d4 + matdP5*d5 + matdP6*d6 ) ) - 1) /
+#                     (exp( 2 * (
+#                         matP0 +
+#                           matdP1*d1 + matdP2*d2 + matdP3*d3 +
+#                           matdP4*d4 + matdP5*d5 +matdP6*d6 ) ) + 1),
+#                   name = "matR")
