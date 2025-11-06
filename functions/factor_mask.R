@@ -65,4 +65,4 @@ factor_mask <- function(n_indicators, n_factors, assign = "balanced"){
 # y7  FALSE  TRUE FALSE
 # y8  FALSE  TRUE FALSE
 # y9  FALSE FALSE  TRUE
-y10 FALSE FALSE  TRUE
+# y10 FALSE FALSE  TRUE
