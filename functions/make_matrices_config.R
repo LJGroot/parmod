@@ -1,6 +1,8 @@
 # Function to create the matrix algebra objects for a configural model with either 1 or more than 1 latent factor 
 make_matrices <- function(n_lv = get("n_lv", envir = .GlobalEnv), k = get("k", envir = .GlobalEnv)) {
-  
+  # source functions for making mxAlgebra objects from char snippets
+  source("https://raw.githubusercontent.com/LJGroot/parmod/refs/heads/main/functions/make_alg.R")
+
   # Helper: assign and return (so you can track what’s created)
   assign_and_return <- function(obj) {
     assign(obj$name, obj, envir = .GlobalEnv)
