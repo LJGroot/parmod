@@ -1,5 +1,5 @@
 make_alg_help <- function(){
-  help_text <- c("
+  help_text <- c('
 ### Algebra helper functions
 # These functions can be used to help create mxAlgebra objects by providing wrappers for mxAlgebraFromString.
 
@@ -47,7 +47,7 @@ make_alg_help <- function(){
   # matrix_letter: this is the name for the deviation matrices, i suggest d for delta followed by the base symbol (e.g., dL)
   # k: number of studies in IPD, used to obtain number of elements necessary in algebraic formulation
   # matrix_name: internal name for mx object, can be specified separately when necessary 
-");print(help_text)
+');print(help_text)
   }
   
   
