@@ -20,7 +20,10 @@ add_dummies <- function(df,
                         name_by_value = FALSE) {
   # error for wrong column name
   if (!study_col %in% names(df)) {
-    stop("Column '", study_col, "' not found in data frame.")
+    stop("Column '",
+study_col, 
+"' not found in data frame. 
+Run make_dummies_help() for help on using this function")
   }
   # full-length vector of values (not unique!)
   studies_vec <- as.character(df[[study_col]])
@@ -28,7 +31,7 @@ add_dummies <- function(df,
   unique_studies <- unique(studies_vec)
     # error for when column has no values
   if (length(unique_studies) == 0) {
-    stop("Study column contains no values")
+    stop("Study column contains no values. Run make_dummies_help() for help on using this function")
   }
   # if ref argument is null, take first unique entry as ref
   # if ref is provided but not present, give error
