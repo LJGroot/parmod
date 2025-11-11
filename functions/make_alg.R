@@ -1,3 +1,5 @@
+make_alg_help <- function(){
+  help_text <- c("
 ### Algebra helper functions
 # These functions can be used to help create mxAlgebra objects by providing wrappers for mxAlgebraFromString.
 
@@ -26,6 +28,30 @@
   # matrix_letter: this is the name for the deviation matrices, i suggest d for delta followed by the base symbol (e.g., dL)
   # k: number of studies in IPD, used to obtain number of elements necessary in algebraic formulation
 
+## FUNCTION: make_alg_log()
+# This function can be used to make mx algebras from string with desired base symbols and deviation letters
+# for log-transformed algebra
+
+# arguments: 
+  # base_symbol: this is the base symbol for the matrix, e.g., T for tau vectors, L for lambda matrices
+  # matrix_letter: this is the name for the deviation matrices, i suggest d for delta followed by the base symbol (e.g., dL)
+  # k: number of studies in IPD, used to obtain number of elements necessary in algebraic formulation
+  # matrix_name: internal name for mx object, can be specified separately when necessary 
+
+## FUNCTION: make_alg_z()
+# This function can be used to make mx algebras from string with desired base symbols and deviation letters
+# for fisher z transformation
+
+# arguments: 
+  # base_symbol: this is the base symbol for the matrix, e.g., T for tau vectors, L for lambda matrices
+  # matrix_letter: this is the name for the deviation matrices, i suggest d for delta followed by the base symbol (e.g., dL)
+  # k: number of studies in IPD, used to obtain number of elements necessary in algebraic formulation
+  # matrix_name: internal name for mx object, can be specified separately when necessary 
+");print(help_text)
+  }
+  
+  
+## FUNCTIONS
 make_alg_linear <- function(base_symbol,   # base symbol (eg. T for tau vector)
                             matrix_letter, # symbol for deviation vector/matrix
                             k              # number of studies
@@ -44,16 +70,6 @@ make_alg_linear <- function(base_symbol,   # base symbol (eg. T for tau vector)
   return(mat) 
   }
 
-## FUNCTION: make_alg_log()
-# This function can be used to make mx algebras from string with desired base symbols and deviation letters
-# for log-transformed algebra
-
-# arguments: 
-  # base_symbol: this is the base symbol for the matrix, e.g., T for tau vectors, L for lambda matrices
-  # matrix_letter: this is the name for the deviation matrices, i suggest d for delta followed by the base symbol (e.g., dL)
-  # k: number of studies in IPD, used to obtain number of elements necessary in algebraic formulation
-  # matrix_name: internal name for mx object, can be specified separately when necessary 
-
 make_alg_log <- function(base_symbol,    # base symbol (eg. T for tau vector)
                          matrix_letter,  # symbol for deviation vector/matrix
                          k,              # number of studies
@@ -68,16 +84,6 @@ make_alg_log <- function(base_symbol,    # base symbol (eg. T for tau vector)
   mat <- mxAlgebraFromString( name = matrix_name, mat_expr )
   return(mat) 
   }
-
-## FUNCTION: make_alg_z()
-# This function can be used to make mx algebras from string with desired base symbols and deviation letters
-# for fisher z transformation
-
-# arguments: 
-  # base_symbol: this is the base symbol for the matrix, e.g., T for tau vectors, L for lambda matrices
-  # matrix_letter: this is the name for the deviation matrices, i suggest d for delta followed by the base symbol (e.g., dL)
-  # k: number of studies in IPD, used to obtain number of elements necessary in algebraic formulation
-  # matrix_name: internal name for mx object, can be specified separately when necessary 
 
 make_alg_z <- function(base_symbol,    # base symbol (eg. T for tau vector)
                        matrix_letter,  # symbol for deviation vector/matrix
