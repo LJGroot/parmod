@@ -1,3 +1,5 @@
+factor_mask_help <- function(){
+  cat(r"(
 ## FUNCTION: factor_mask()
 # This function can be used to create a boolean mask matrix for factor loadings
 # A boolean mask matrix is a matrix that reflects the factor structure of the model
@@ -53,7 +55,8 @@
 # y8  FALSE  TRUE FALSE
 # y9  FALSE FALSE  TRUE
 # y10 FALSE FALSE  TRUE
-
+)")
+  
 factor_mask <- function(n_indicators, n_factors, assign = "balanced"){
   # Sanity check for user input
   # Stop if there is less than one indicator
