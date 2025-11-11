@@ -56,7 +56,7 @@ factor_mask_help <- function(){
 # y9  FALSE FALSE  TRUE
 # y10 FALSE FALSE  TRUE
 )")
-  
+ } 
 factor_mask <- function(n_indicators, n_factors, assign = "balanced"){
   # Sanity check for user input
   # Stop if there is less than one indicator
