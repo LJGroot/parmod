@@ -1,3 +1,5 @@
+make_dummies_help <- function(){
+  cat(r"(
 # This function can be used to add dummy variables to you IPD data set. 
   
 # It assumes that your IPD is stored as raw data in long format with a study identifier (preferably labeled as "study").
@@ -8,7 +10,9 @@
 # prefix = preferred prefix for names of dummy variables, defaults to "d"
 # name_by_value = use numbers 1 through k as dummy suffix (TRUE), 
 #                 or use original study ID as suffix (FALSE)
-  
+  )")
+  }
+
 add_dummies <- function(df, 
                         study_col = "study", 
                         ref = NULL, 
