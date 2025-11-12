@@ -1,13 +1,17 @@
+# parmod
 This repostiory accompanies the IPD MASEM tutorial paper "Making the Most of Minimal Data: IPD MASEM via Parameter Moderation Using OpenMx" by Lennert J. Groot, Kees Jan Kan, and Suzanne Jak (Manuscript in preparation).
 
+## Contents of this repository
+### Syntax
 The syntax folder contains R scripts. 
+
   parmod_tutorial.R contains the syntax that is used in the publication and uses a completely manual (but somewhat laborious) specification of each of the models.
   parmod_CFA_SF.R, parmod_CFA_MF.R and parmod_PA.R contain syntax to use PM for, respecitively, a single-factor factor model, a multi-factor factor model, and a path model.
     the syntax in these files is flexible and allows for the user to conduct IPD MASEM via PM on their own data and hypothesized model.
-    
-The data folder contains data files that are used in the tutorial and as example data in the additional applications of PM.
 
-The functions folder contains a set of helper functions that are not used in the tutorial, but are used in the additional syntax files. The 
+### Data
+The data folder contains data files that are used in the tutorial and as example data in the additional applications of PM.
+The following data used in the tutorial and included in the repository:
 
 The data used for the factor model tutorial are published in:
 Scherer, R., & Campos, D. G. (2022). Measuring those who have their minds set: An item-level
@@ -20,3 +24,7 @@ Huh, D., Li, X., Zhou, Z., Walters, S. T., Baldwin, S. A., Tan, Z., Larimer, M. 
   using individual participant data: Testing protective behavioral strategies as a mediator
   of brief motivational intervention effects on alcohol-related problems. Prevention Science,
   23(3), 390–402. https://doi.org/10.1007/s11121-021-01318-4
+
+### Functions
+The functions folder contains a set of helper functions. Please note that these are not used in the tutorial or described int he publication. 
+The functions are used in the additional syntax files.
