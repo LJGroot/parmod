@@ -36,6 +36,10 @@ if (!is.function(get0("make_matrices_config_help", ifnotfound = NULL))) message(
   "Function 'make_matrices_config_help' in https://raw.githubusercontent.com/LJGroot/parmod/refs/heads/main/functions/make_matrices_config.R could not be loaded. Check repo or contact host.")
 
 # loading message
+if (all(vapply(c("add_dummies","add_dummies_help","factor_mask","factor_mask_help",
+                 "make_alg_linear","make_alg_log","make_alg_z","make_alg_help",
+                 "make_matrices_config","make_matrices_config_help"),
+               function(n) is.function(get0(n, ifnotfound = NULL)), logical(1))))
 cat("
 Functions:
   add_dummies
