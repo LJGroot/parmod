@@ -11,7 +11,16 @@ source("https://raw.githubusercontent.com/LJGroot/parmod/refs/heads/main/functio
 # make final matrix objects for factor model with configural invariance (fully moderated)
 source("https://raw.githubusercontent.com/LJGroot/parmod/refs/heads/main/functions/make_matrices_config.R")
 
-cat("r(
-Helper functions loaded into workspace.
-Run _help() functions to see intstructions on use.
-)")
+cat("
+Functions:
+  add_dummies
+  factor_mask
+  make_alg_linear
+  make_alg_log
+  make_alg_z
+  make_matrices_config
+loaded into workspace.
+
+For instructions on use, run: 
+  factor_mask_help(); make_alg_help(); make_dummies_help()
+")
