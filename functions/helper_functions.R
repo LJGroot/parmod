@@ -1,6 +1,7 @@
 # # Source all helper functions in this `functions` folder at once
 # adding dummy variables
 source("https://raw.githubusercontent.com/LJGroot/parmod/refs/heads/main/functions/add_dummies.R")
+# Return warning when function is not properly loading
 if (!is.function(get0("add_dummies", ifnotfound = NULL))) message(
   "Function 'add_dummies' in https://raw.githubusercontent.com/LJGroot/parmod/refs/heads/main/functions/add_dummies.R could not be loaded. Check repo or contact host.")
 if (!is.function(get0("add_dummies_help", ifnotfound = NULL))) message(
@@ -8,6 +9,7 @@ if (!is.function(get0("add_dummies_help", ifnotfound = NULL))) message(
 
 # Factor structure mask
 source("https://raw.githubusercontent.com/LJGroot/parmod/refs/heads/main/functions/factor_mask.R")
+# Return warning when function is not properly loading
 if (!is.function(get0("factor_mask", ifnotfound = NULL))) message(
   "Function 'factor_mask' in https://raw.githubusercontent.com/LJGroot/parmod/refs/heads/main/functions/factor_mask.R could not be loaded. Check repo or contact host.")
 if (!is.function(get0("factor_mask_help", ifnotfound = NULL))) message(
@@ -15,6 +17,7 @@ if (!is.function(get0("factor_mask_help", ifnotfound = NULL))) message(
 
 # make mxAlgebra objects from string, a) linear, b) log-linear, and c) fisher's Z transformed
 source("https://raw.githubusercontent.com/LJGroot/parmod/refs/heads/main/functions/make_alg.R")
+# Return warning when function is not properly loading
 if (!is.function(get0("make_alg_linear", ifnotfound = NULL))) message(
   "Function 'make_alg_linear' in https://raw.githubusercontent.com/LJGroot/parmod/refs/heads/main/functions/make_alg.R could not be loaded. Check repo or contact host.")
 if (!is.function(get0("make_alg_log", ifnotfound = NULL))) message(
@@ -26,6 +29,7 @@ if (!is.function(get0("make_alg_help", ifnotfound = NULL))) message(
 
 # make final matrix objects for factor model with configural invariance (fully moderated)
 source("https://raw.githubusercontent.com/LJGroot/parmod/refs/heads/main/functions/make_matrices_config.R")
+# Return warning when function is not properly loading
 if (!is.function(get0("make_matrices_config", ifnotfound = NULL))) message(
   "Function 'make_matrices_config' in https://raw.githubusercontent.com/LJGroot/parmod/refs/heads/main/functions/make_matrices_config.R could not be loaded. Check repo or contact host.")
 if (!is.function(get0("make_matrices_config_help", ifnotfound = NULL))) message(
