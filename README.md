@@ -15,12 +15,12 @@ The following data used in the tutorial and included in the repository:
 
 The data used for the factor model tutorial are published in:
 
-Organisation for Economic Co-operation and Development. (2024). PISA 2022 Database [Data
+-   Organisation for Economic Co-operation and Development. (2024). PISA 2022 Database [Data
 set] [Retrieved from https://www.oecd.org/en/data/datasets/pisa-2022-database.html].
   
 The data used for the path model tutorial are published in:
 
-Huh, D., Li, X., Zhou, Z., Walters, S. T., Baldwin, S. A., Tan, Z., Larimer, M. E., & Mun, E.-Y.
+-   Huh, D., Li, X., Zhou, Z., Walters, S. T., Baldwin, S. A., Tan, Z., Larimer, M. E., & Mun, E.-Y.
   (2022). A structural equation modeling approach to meta-analytic mediation analysis
   using individual participant data: Testing protective behavioral strategies as a mediator
   of brief motivational intervention effects on alcohol-related problems. Prevention Science,
@@ -28,7 +28,7 @@ Huh, D., Li, X., Zhou, Z., Walters, S. T., Baldwin, S. A., Tan, Z., Larimer, M. 
 
 Additional data is used as example data in the flexible syntax files for multi-factor CFA models
 
-Scherer, R., & Campos, D. G. (2022). Measuring those who have their minds set: An item-level
+-   Scherer, R., & Campos, D. G. (2022). Measuring those who have their minds set: An item-level
   meta-analysis of the implicit theories of intelligence scale in education. Educational
   Research Review, 37, 100479. https://doi.org/https://doi.org/10.1016/j.edurev.2022.100479
 
