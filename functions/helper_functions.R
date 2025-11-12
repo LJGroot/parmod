@@ -11,6 +11,7 @@ source("https://raw.githubusercontent.com/LJGroot/parmod/refs/heads/main/functio
 # make final matrix objects for factor model with configural invariance (fully moderated)
 source("https://raw.githubusercontent.com/LJGroot/parmod/refs/heads/main/functions/make_matrices_config.R")
 
+# loading message
 cat("
 Functions:
   add_dummies
