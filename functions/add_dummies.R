@@ -1,6 +1,6 @@
-make_dummies_help <- function(){
+add_dummies_help <- function(){
   cat(r"(
-## FUNCTION `make_dummies()`
+## FUNCTION `add_dummies()`
 # This function can be used to add dummy variables to you IPD data set. 
   
 # It assumes that your IPD is stored as raw data in long format with a study identifier (preferably labeled as "study").
@@ -24,7 +24,7 @@ add_dummies <- function(df,
     stop("Column '",
 study_col, 
 "' not found in data frame. 
-Run make_dummies_help() for help on using this function")
+Run add_dummies_help() for help on using this function")
   }
   # full-length vector of values (not unique!)
   studies_vec <- as.character(df[[study_col]])
@@ -32,7 +32,7 @@ Run make_dummies_help() for help on using this function")
   unique_studies <- unique(studies_vec)
     # error for when column has no values
   if (length(unique_studies) == 0) {
-    stop("Study column contains no values. Run make_dummies_help() for help on using this function")
+    stop("Study column contains no values. Run add_dummies_help() for help on using this function")
   }
   # if ref argument is null, take first unique entry as ref
   # if ref is provided but not present, give error
