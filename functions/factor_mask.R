@@ -34,7 +34,10 @@ factor_mask_help <- function(){
 # y6 FALSE  TRUE
 
 
-# For assign != "balanced", provide a vector that represents factor sructure as follows
+# For 
+#      assign != "balanced", 
+# provide a vector that represents factor sructure as follows
+
 # c(rep(
 #  "factor number 1", "number of indicators", 
 # through 
@@ -71,16 +74,16 @@ factor_mask <- function(n_indicators, n_factors, assign = "balanced"){
   # determine assignment of each indicator to a factor
   if(is.character(assign) && assign == "balanced"){
   # assign indicators consecutively to factors as evenly as possible
-  base <- floor(n_indicators / n_factors) # floor = largest even group possible
-  extra <- n_indicators %% n_factors # modulus (rest after taking floor)
-  sizes <- rep(base, n_factors) # devide base over factors
-  if(extra > 0) sizes[1:extra] <- sizes[1:extra] + 1 # add rest to factors until none left
-  inds <- rep(seq_len(n_factors), times = sizes) # repeat each factor index according to computed sizes
-  if(length(inds) != n_indicators) stop("assignment error") # sanity check: total assigned equals number of indicators
+    base <- floor(n_indicators / n_factors) # floor = largest even group possible
+    extra <- n_indicators %% n_factors # modulus (rest after taking floor)
+    sizes <- rep(base, n_factors) # devide base over factors
+    if(extra > 0) sizes[1:extra] <- sizes[1:extra] + 1 # add rest to factors until none left
+    inds <- rep(seq_len(n_factors), times = sizes) # repeat each factor index according to computed sizes
+    if(length(inds) != n_indicators) stop("assignment error") # sanity check: total assigned equals number of indicators
   } else if(is.numeric(assign)){
-  if(length(assign) != n_indicators) stop("assign vector must have length n_indicators") # ensure provided vector matches indicator count
-  if(any(assign < 1 | assign > n_factors)) stop("assign values must be between 1 and n_factors") # validate factor indices are in range
-  inds <- as.integer(assign) # coerce numeric vector to integer factor indices
+    if(length(assign) != n_indicators) stop("assign vector must have length n_indicators") # ensure provided vector matches indicator count
+    if(any(assign < 1 | assign > n_factors)) stop("assign values must be between 1 and n_factors") # validate factor indices are in range
+    inds <- as.integer(assign) # coerce numeric vector to integer factor indices
   } else stop("assign must be 'balanced' or numeric vector of factor indices") # invalid assign argument type or value
 
   # Create mask matrix
