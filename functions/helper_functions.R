@@ -1,5 +1,4 @@
 # # Source all helper functions in this folder at once
-
 # adding dummy variables
 source("https://raw.githubusercontent.com/LJGroot/parmod/refs/heads/main/functions/add_dummies.R")
 
@@ -11,3 +10,8 @@ source("https://raw.githubusercontent.com/LJGroot/parmod/refs/heads/main/functio
 
 # make final matrix objects for factor model with configural invariance (fully moderated)
 source("https://raw.githubusercontent.com/LJGroot/parmod/refs/heads/main/functions/make_matrices_config.R")
+
+cat("r(
+Helper functions loaded into workspace.
+Run _help() functions to see intstructions on use.
+)")
