@@ -1,5 +1,6 @@
 make_dummies_help <- function(){
   cat(r"(
+## FUNCTION `make_dummies()`
 # This function can be used to add dummy variables to you IPD data set. 
   
 # It assumes that your IPD is stored as raw data in long format with a study identifier (preferably labeled as "study").
