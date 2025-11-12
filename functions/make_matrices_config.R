@@ -1,3 +1,39 @@
+# Documentation
+make_matrices_config_help <- function(){
+  cat("r(
+## FUNCTION: make_matrices_config
+# This function can be used to create the mxAlgebra objects necessary for a configural CFA model.
+# It uses make_alg wrapper functions for mxALgebraFromString that are also part of the set of helper functions
+# stored in the `parmod` repository. The functions all rely on previously specified baseline matrices and 
+# deviation matrices for each of the subsequent primary studies.
+
+# By providing the number of latent factors (n_lv) in your model, this function generates (mostly, mxAlgebra) objects for
+# the following objects:
+
+# When n_lv == 1
+#   matT (linear algebra for Tau vector of indicator intercepts)
+#   matL (linear algebra for Lambda matrix of indicator loadings)
+#   matK (linear algebra for Kappa matrix of factor means)
+#   matE (log-linear algebra for Theta matrix of indicator residual variances)
+#   matP (log-linear algebra for Phi matrix of factor variance)
+
+# When n_lv > 1
+#   matT (linear algebra for Tau vector of indicator intercepts)
+#   matL (linear algebra for Lambda matrix of indicator loadings)
+#   matK (linear algebra for Kappa matrix of factor means)
+#   matE (log-linear algebra for Theta matrix of indicator residual variances)
+#   matP is now made up from the following series of algebraic formulas
+#   matVar (log-linear algebra for factor variance matrix)
+#   matR (Fisher' z-transformation of factor covariances) 
+#   matIa (n_lv by n_lv identity matrix)
+#   matIb (n_lv by n_lv matrix with zero on diagonal and one in off-diagonal cells)
+#   matCov ( (matIa * sqrt(matVar)) %*% matR %*% (matIa * sqrt(matVar) )
+#   matP ( matIa * matVar + matIb * matCov )
+
+# See publication [reference] for more background.
+)")
+  }
+
 # Function to create the matrix algebra objects for a configural model with either 1 or more than 1 latent factor 
 make_matrices_config <- function(n_lv = get("n_lv", envir = .GlobalEnv), k = get("k", envir = .GlobalEnv)) {
   # source functions for making mxAlgebra objects from char snippets
@@ -36,10 +72,9 @@ make_matrices_config <- function(n_lv = get("n_lv", envir = .GlobalEnv), k = get
     # Identity matrices
     matIa <- assign_and_return(mxMatrix(
       type = "Diag", nrow = n_lv, ncol = n_lv, values = 1, name = "matIa"))
-    
     matIb <- assign_and_return(mxMatrix(
       type = "Full", nrow = n_lv, ncol = n_lv,
-      values = if (n_lv == 2) c(0, 1, 1, 0) else 0, name = "matIb"))
+      values = as.numeric(!(diag(nrow=n_lv))), name = "matIb"))
     
     # Latent covariance algebra
     matCov <- assign_and_return(mxAlgebra(
