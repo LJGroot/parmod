@@ -1,0 +1,10 @@
+# Note on original data
+The original raw data is from the OECD PISA data set:
+
+Organisation for Economic Co-operation and Development. (2024). PISA 2022 Database [Data set] Retrieved from https://www.oecd.org/en/data/datasets/pisa-2022-database.html.
+
+File too large (ca. 100 MB) for storage in theis Github repository.
+
+See htpps://www.osf.io/e9c6a for a copy of the original data.
+
+Syntax files found here and on OSF contain instructions on how to load the data directly from the repository into your workspace environment.
