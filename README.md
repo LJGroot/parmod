@@ -1,5 +1,5 @@
 # parmod
-This repostiory accompanies the IPD MASEM tutorial paper "Making the Most of Minimal Data: IPD MASEM via Parameter Moderation Using OpenMx" by Lennert J. Groot, Kees Jan Kan, and Suzanne Jak (Manuscript in preparation).
+This repostiory accompanies the IPD MASEM tutorial paper "Making the Most of Minimal Data: IPD MASEM via Parameter Moderation Using OpenMx" by Lennert J. Groot, Kees Jan Kan, and Suzanne Jak (Manuscript under revision).
 
 ## Contents of this repository
 ### Syntax
