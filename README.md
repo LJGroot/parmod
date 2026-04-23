@@ -58,5 +58,5 @@ Additional data is used as example data in the flexible syntax files for multi-f
   Research Review, 37, 100479. https://doi.org/https://doi.org/10.1016/j.edurev.2022.100479
 
 ### Functions
-The functions folder contains a set of helper functions. Please note that these are not used in the tutorial or described int he publication. 
+The functions folder contains a set of helper functions. Please note that these are not used in the tutorial or described in the publication. 
 The functions are used in the additional syntax files.
