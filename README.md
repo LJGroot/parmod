@@ -3,11 +3,36 @@ This repostiory accompanies the IPD MASEM tutorial paper "Making the Most of Min
 
 ## Contents of this repository
 ### Syntax
-The syntax folder contains R scripts. 
+This syntax folder contains the following R scripts:
 
-  parmod_tutorial.R contains the syntax that is used in the publication and uses a completely manual (but somewhat laborious) specification of each of the models.
-  parmod_CFA_SF.R, parmod_CFA_MF.R and parmod_PA.R contain syntax to use PM for, respecitively, a single-factor factor model, a multi-factor factor model, and a path model.
-    the syntax in these files is flexible and allows for the user to conduct IPD MASEM via PM on their own data and hypothesized model.
+-   `parmod_tutorial_CFA`
+-   `parmod_tutorial_PA`
+-   `parmod_CFA_SF`
+-   `parmod_CFA_MF`
+-   `parmod_PA`
+
+The use and contents of the different scripts are described below.
+
+#### parmod tutorial CFA
+
+`parmod_tutorial_CFA.R` contains the syntax that is used in the tutorial paper, in particular in the section on evaluating a factor model. The script uses a completely manual specification of each of the models.
+
+#### parmod tutorial PA
+
+`parmod_tutorial_CFA.R` contains the syntax that is used in the tutorial paper, in particular in the section on evaluating a path model. The script uses a completely manual specification of each of the models.
+
+
+#### parmod CFA SF
+
+parmod_CFA_SF.R, contains syntax to use PM for a single-factor model. This syntax file is flexible and allows for the user to conduct IPD MASEM via PM on their own data and hypothesized model. It uses some more helper functions and shorter programming than the manual specification in the tutorial.
+
+#### parmod CFA MF
+
+`parmod_CFA_MF.R` contains syntax to use PM for a single-factor a multi-factor model. This syntax file is flexible and allows for the user to conduct IPD MASEM via PM on their own data and hypothesized model. It uses some more helper functions and shorter programming than the manual specification in the tutorial.
+
+#### parmod PA
+
+`parmod_PA.R` contains syntax to use PM for a path model. This syntax file is flexible and allows for the user to conduct IPD MASEM via PM on their own data and hypothesized model. It uses some more helper functions and shorter programming than the manual specification in the tutorial.
 
 ### Data
 The data folder contains data files that are used in the tutorial and as example data in the additional applications of PM.
